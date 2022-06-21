@@ -68,6 +68,6 @@ app.get("/api/:bossName", (req, res) => {
   bosses[bossName] ? res.json(bosses[bossName]) : res.json(bosses[link]);
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log("listening on port 5000");
 });
